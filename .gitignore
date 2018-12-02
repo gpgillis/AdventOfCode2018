@@ -1,0 +1,6 @@
+/out
+/bin
+*.iml
+build.log
+node_modules
+npm-debug.log

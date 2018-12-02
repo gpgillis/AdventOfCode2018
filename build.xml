@@ -1,0 +1,44 @@
+<project name="advent_of_code" default="compile" basedir=".">
+    <!-- Project directories -->
+    <property name="src" location="src"/>
+    <property name="lib" location="lib"/>
+    <property name="build" location="out"/>
+    <property name="bin" location="bin"/>
+    <property name="endorsed-libs" location="${lib}/endorsed"/>
+    <property name="resources" location="${build}/resources"/>
+    <property name="inputDataFile" location="${resources}/inputdata/input.dat"/>
+
+    <record name="./build.log" loglevel="verbose" action="start"/>
+
+    <target name="advent-of-code" depends="advent-of-code-jar">
+        <advent-of-code></advent-of-code>
+    </target>
+
+    <macrodef name="advent-of-code">
+        <sequential>
+            <java jar="${bin}/advent_of_code.jar" fork="true" failonerror="true">
+                <arg value="--inputFile=${inputDataFile}"/>
+            </java>
+        </sequential>
+    </macrodef>
+
+    <target name="compile">
+        <mkdir dir="${build}"/>
+        <javac srcdir="${src}" destdir="${build}">
+            <classpath>
+                <fileset dir="${lib}" includes="**/*.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="advent-of-code-jar" depends="compile">
+        <mkdir dir="${bin}"/>
+        <jar destfile="${bin}/advent_of_code.jar" basedir="${build}">
+            <manifest>
+                <attribute name="Main-Class" value="com.gpg.AdventOfCodeMain"/>
+            </manifest>
+            <zipgroupfileset includes="**/*.jar" dir="${lib}"/>
+        </jar>
+    </target>
+
+</project>
