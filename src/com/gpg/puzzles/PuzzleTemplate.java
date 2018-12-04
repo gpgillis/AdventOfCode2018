@@ -5,7 +5,7 @@ import static com.gpg.util.Logging.fail;
 
 /**
  Advent Of Code Puzzle :
- http://adventofcode.com/2017/day/
+ http://adventofcode.com/2018/day/
 
 
  The correct answer is with puzzle .dat
@@ -17,7 +17,5 @@ public class PuzzleTemplate extends PuzzleBase {
         return true;
     }
 
-    protected int SolveMe(ArrayList<String> inputData) {
-        return 0;
-    }
+    protected void SolveMe(ArrayList<String> inputData) { }
 }

@@ -4,20 +4,33 @@
     <property name="lib" location="lib"/>
     <property name="build" location="out"/>
     <property name="bin" location="bin"/>
-    <property name="endorsed-libs" location="${lib}/endorsed"/>
-    <property name="resources" location="${build}/resources"/>
-    <property name="inputDataFile" location="${resources}/inputdata/input.dat"/>
+    <property name="resources" location="resources"/>
+    <property name="exampleDataFile" location="${resources}/example.dat"/>
+    <property name="puzzle" value="3"/>
 
     <record name="./build.log" loglevel="verbose" action="start"/>
 
     <target name="advent-of-code" depends="advent-of-code-jar">
-        <advent-of-code></advent-of-code>
+        <advent-of-code/>
+    </target>
+
+    <target name="advent-of-code-using-example-data" depends="advent-of-code-jar">
+        <advent-of-code-using-example-data/>
     </target>
 
     <macrodef name="advent-of-code">
         <sequential>
             <java jar="${bin}/advent_of_code.jar" fork="true" failonerror="true">
-                <arg value="--inputFile=${inputDataFile}"/>
+                <arg value="--puzzle=${puzzle}"/>
+            </java>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="advent-of-code-using-example-data">
+        <sequential>
+            <java jar="${bin}/advent_of_code.jar" fork="true" failonerror="true">
+                <arg value="--puzzle=${puzzle}"/>
+                <arg value="--inputFile=${exampleDataFile}"/>
             </java>
         </sequential>
     </macrodef>

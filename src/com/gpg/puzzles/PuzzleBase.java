@@ -40,11 +40,15 @@ public abstract class PuzzleBase {
         return true;
     }
 
-    protected boolean ValidateMultiLineDataFile(List<String> inputData) {
+    boolean ValidateMultiLineDataFile(List<String> inputData) {
         if (inputData.size() == 0) {
             System.out.println("Incorrect input data - The input data should be one or more lines of text.");
             return false;
         }
         return true;
+    }
+
+    static Boolean isStringNullOrEmpty(String test) {
+        return test == null || test.trim().isEmpty();
     }
 }
