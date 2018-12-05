@@ -22,6 +22,7 @@ import java.util.Map;
  */
 class Puzzle3B
 {
+    // Solving using data processed from Part A instead of processing as a separate solver.
     void SolveMe(Map<String, Integer> takenAreas, Map<String, String> takenClaims) {
 
         System.out.println("Puzzle 3B Solver");

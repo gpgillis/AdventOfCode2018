@@ -2,6 +2,7 @@ package com.gpg.puzzles;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
 
 /**
     Advent Of Code Puzzle 1B:
@@ -40,7 +41,7 @@ public class Puzzle1B extends Puzzle1Base
     protected void SolveMe(ArrayList<String> inputData) {
         LoadShiftData(inputData);
 
-        List<Integer> foundFrequencies = new ArrayList<Integer>();
+        TreeSet<Integer> foundFrequencies = new TreeSet<Integer>();
 
         Integer frequency = 0;
         boolean duplicateFound = false;

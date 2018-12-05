@@ -8,16 +8,6 @@ import java.util.List;
  */
 public abstract class PuzzleBase {
 
-    private String _puzzleName = "";
-
-    public PuzzleBase() {
-        _puzzleName = "no name";
-    }
-
-    public PuzzleBase(String name) {
-        _puzzleName = name;
-    }
-
     public void SolvePuzzle(ArrayList<String> inputData) {
         System.out.println(String.format("\nSolving Puzzle %s ...", this.getClass().getSimpleName()));
 
