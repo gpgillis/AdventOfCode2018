@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 import com.gpg.puzzles.*;
+import com.sun.media.sound.InvalidFormatException;
 
 import static com.gpg.util.ArgUtil.*;
 import static com.gpg.util.Logging.fail;
@@ -34,6 +35,8 @@ public class AdventOfCodeMain {
         ArrayList<String> inputData = getInputFileData(fileName);
 
         Solver solver = getPuzzleSolver(runPuzzle);
+        if (getShowMessages(args))
+            solver.setShowMessage(true);
 
         if (solver == null) {
             System.out.println(String.format("No solver was found for puzzle %d", runPuzzle));
@@ -108,6 +111,22 @@ public class AdventOfCodeMain {
         return 0;
     }
 
+    private static boolean getShowMessages(String[] args) {
+        Boolean show = false;
+        try {
+            String flag = getArgument("showMessage", args);
+            show = Boolean.parseBoolean(flag);
+        }
+        catch (MissingArgumentException e) {
+            return false;
+        }
+        catch (IllegalArgumentException e) {
+            fail(USAGE, e);
+        }
+
+        return show;
+    }
+
     private static Solver getPuzzleSolver(int runPuzzle) {
 
         switch (runPuzzle) {
@@ -119,6 +138,8 @@ public class AdventOfCodeMain {
                 return new Solver(new Puzzle3A(), null);
             case 4:
                 return new Solver(new Puzzle4A(), null);
+            case 5:
+                return new Solver(new Puzzle5A(), new Puzzle5B());
         }
 
         return null;

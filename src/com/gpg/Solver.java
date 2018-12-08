@@ -17,6 +17,14 @@ public class Solver {
         _puzzleBSolver = bSolver;
     }
 
+    public void setShowMessage(boolean show) {
+        if (_puzzleASolver != null)
+            _puzzleASolver.printMessages = show;
+
+        if (_puzzleBSolver != null)
+            _puzzleBSolver.printMessages = show;
+    }
+
     public void Solve(ArrayList<String> inputData) {
         if (_puzzleASolver != null) {
             _puzzleASolver.SolvePuzzle(inputData);

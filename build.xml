@@ -6,7 +6,7 @@
     <property name="bin" location="bin"/>
     <property name="resources" location="resources"/>
     <property name="exampleDataFile" location="${resources}/example.dat"/>
-    <property name="puzzle" value="4"/>
+    <property name="puzzle" value="5"/>
 
     <record name="./build.log" loglevel="verbose" action="start"/>
 

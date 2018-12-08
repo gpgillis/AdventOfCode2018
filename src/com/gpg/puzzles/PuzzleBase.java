@@ -8,6 +8,8 @@ import java.util.List;
  */
 public abstract class PuzzleBase {
 
+    public static Boolean printMessages = false;
+
     public void SolvePuzzle(ArrayList<String> inputData) {
         System.out.println(String.format("\nSolving Puzzle %s ...", this.getClass().getSimpleName()));
 
