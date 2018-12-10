@@ -7,6 +7,8 @@ namespace AdventOfCode2018
 
     public abstract class Puzzle : IPuzzle
     {
+        public abstract string PuzzleName { get; }
+
         public abstract Task<string> PuzzleA();
 
         public abstract Task<string> PuzzleB();

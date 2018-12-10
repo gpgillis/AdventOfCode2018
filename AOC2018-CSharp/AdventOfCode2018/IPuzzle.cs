@@ -4,6 +4,8 @@
 
     public interface IPuzzle
     {
+        string PuzzleName { get; }
+
         Task<string> PuzzleA();
 
         Task<string> PuzzleB();

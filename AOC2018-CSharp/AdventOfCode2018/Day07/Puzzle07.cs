@@ -9,20 +9,25 @@ namespace AdventOfCode2018.Day07
 {
     public class Puzzle07 : Puzzle
     {
-        public static string DATANAME = "AdventOfCode2018.Day07.data.txt";
+        private static string DATANAME = "AdventOfCode2018.Day07.data.txt";
 
+        public override string PuzzleName { get { return "Puzzle 06"; } }
+
+        // --------------------------------------------------------------------
         public async override Task<string> PuzzleA()
         {
             var rules = await LoadStepRules();
             return new Solver07().PuzzleA(rules);
         }
 
+        // --------------------------------------------------------------------
         public async override Task<string> PuzzleB()
         {
             var rules = await LoadStepRules();
             return new Solver07().PuzzleB(rules, 5, 60);
         }
 
+        // --------------------------------------------------------------------
         public async Task<StepRules> LoadStepRules()
         {
             var data = await GetInput(DATANAME);
@@ -36,6 +41,7 @@ namespace AdventOfCode2018.Day07
             return rules;
         }
 
+        // --------------------------------------------------------------------
         private async Task<IEnumerable<string>> GetInput(string resource)
         {
             return (await this.ReadResource(resource))

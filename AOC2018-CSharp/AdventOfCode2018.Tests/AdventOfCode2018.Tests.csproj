@@ -51,9 +51,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Puzzle6Tests.cs" />
+    <Compile Include="Puzzle08Tests.cs" />
+    <Compile Include="Puzzle06Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Puzzle7Tests.cs" />
+    <Compile Include="Puzzle07Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode2018\AdventOfCode2018.csproj">

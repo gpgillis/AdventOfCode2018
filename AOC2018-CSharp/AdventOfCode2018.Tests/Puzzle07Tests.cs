@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace AdventOfCode2018.Tests
 {
     [TestClass]
-    public class Puzzle7Tests
+    public class Puzzle07Tests
     {
         // --------------------------------------------------------------------
         private static String[] TestData = new[]
@@ -31,7 +31,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestStepRuleCreation()
+        public void P7_TestStepRuleCreation()
         {
             string goodLine = TestData[0];
             string badLine = TestData[0].Replace("be", String.Empty);
@@ -62,7 +62,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestStepLoadingFromTestData()
+        public void P7_TestStepLoadingFromTestData()
         {
             var sr = GetTestData();
 
@@ -74,7 +74,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestPuzzleLoadingStepRules()
+        public void P7_TestPuzzleLoadingStepRules()
         {
             var p = new Puzzle07();
             var s = p.LoadStepRules();
@@ -83,7 +83,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestAllReadySteps()
+        public void P7_TestAllReadySteps()
         {
             var sr = GetTestData();
             var ready = sr.GetReadySteps();
@@ -99,7 +99,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestNextReadyStep()
+        public void P7_TestNextReadyStep()
         {
             var sr = GetTestData();
             var ready = sr.GetNextReadyStep();
@@ -110,7 +110,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestRemoveDependency()
+        public void P7_TestRemoveDependency()
         {
             var sr = GetTestData();
             sr.RemoveDependency("C");
@@ -121,7 +121,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestTaskDurationMap()
+        public void P7_TestTaskDurationMap()
         {
             var d = WorkProcessor.GetTaskDuration("A");
             Assert.AreEqual(1, d);
@@ -135,7 +135,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestWorkProcessorQueueTasks()
+        public void P7_TestWorkProcessorQueueTasks()
         {
             var wp = new WorkProcessor(2);
             Assert.IsTrue(wp.AddTask("A"));
@@ -145,7 +145,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestWorkProcessorProcessQueue()
+        public void P7_TestWorkProcessorProcessQueue()
         {
             var wp = new WorkProcessor(2);
             var ready = new List<string> { "A", "F", "C" };
@@ -181,7 +181,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestPuzzle7A()
+        public void TestPuzzle07A()
         {
             var steps = GetTestData();
             Assert.AreEqual(TestSteps.Length, steps.Rules.Count);
@@ -192,7 +192,7 @@ namespace AdventOfCode2018.Tests
 
         // --------------------------------------------------------------------
         [TestMethod]
-        public void TestPuzzle7B()
+        public void TestPuzzle07B()
         {
             var steps = GetTestData();
             Assert.AreEqual(TestSteps.Length, steps.Rules.Count);

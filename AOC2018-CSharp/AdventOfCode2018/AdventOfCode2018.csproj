@@ -41,6 +41,9 @@
     <Compile Include="Day07\Solver07.cs" />
     <Compile Include="Day07\StepRules.cs" />
     <Compile Include="Day07\WorkProcessor.cs" />
+    <Compile Include="Day08\Node.cs" />
+    <Compile Include="Day08\Puzzle08.cs" />
+    <Compile Include="Day08\Solver08.cs" />
     <Compile Include="IPuzzle.cs" />
     <Compile Include="Puzzle.cs" />
   </ItemGroup>
@@ -53,6 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Day07\data.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Day06\PuzzleInstructions.txt" />
+    <Content Include="Day07\PuzzleInstuctions.txt" />
+    <EmbeddedResource Include="Day08\data.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

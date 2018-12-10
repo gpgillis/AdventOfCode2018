@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AdventOfCode2018.Tests
 {
     [TestClass]
-    public class Puzzle6Tests
+    public class Puzzle06Tests
     {
         private static IEnumerable<Point> TestData1 = new[]
         {
@@ -20,7 +20,7 @@ namespace AdventOfCode2018.Tests
         };
 
         [TestMethod]
-        public void TestPuzzle6A()
+        public void TestPuzzle06A()
         {
             var solver = new Day06.Solver06();
             var s = solver.PuzzleA(TestData1);
@@ -28,7 +28,7 @@ namespace AdventOfCode2018.Tests
         }
 
         [TestMethod]
-        public void TestPuzzle6B()
+        public void TestPuzzle06B()
         {
             var solver = new Day06.Solver06();
             var s = solver.PuzzleB(TestData1, 32);
