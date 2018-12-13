@@ -4,10 +4,11 @@
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Threading.Tasks;
+    using Console = System.Console;
     using AdventOfCode2018.Day06;
     using AdventOfCode2018.Day07;
     using AdventOfCode2018.Day08;
-    using Console = System.Console;
+    using AdventOfCode2018.Day09;
 
     class Program
     {
@@ -15,7 +16,8 @@
         {
             {6, new Puzzle06()},
             {7, new Puzzle07()},
-            {8, new Puzzle08()}
+            {8, new Puzzle08()},
+            {9, new Puzzle09()}
         };
 
         public static void Main(string[] args)
@@ -57,7 +59,7 @@
                 Console.WriteLine(e);
             }
             watch.Stop();
-            Console.WriteLine("Time taken: {0}ms", watch.Elapsed.TotalMilliseconds);
+            Console.WriteLine("Time taken: {0} ms", watch.Elapsed.TotalMilliseconds);
         }
     }
 }

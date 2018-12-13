@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DEQuePortable, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DEQuePortable.1.0.5\lib\portable45-net45+win8+wp8+wpa81\DEQuePortable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
   </ItemGroup>
@@ -55,12 +59,16 @@
     <Compile Include="Puzzle06Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puzzle07Tests.cs" />
+    <Compile Include="Puzzle09Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode2018\AdventOfCode2018.csproj">
       <Project>{5aa6d086-02ef-4c4e-9673-24c5e71836a9}</Project>
       <Name>AdventOfCode2018</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
