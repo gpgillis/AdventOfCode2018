@@ -48,6 +48,10 @@
     <Compile Include="Day09\Puzzle09.cs" />
     <Compile Include="Day09\Solver09.cs" />
     <Compile Include="Day10\Day10Solver.cs" />
+    <Compile Include="Day11\FuelCell.cs" />
+    <Compile Include="Day11\GridSolver.cs" />
+    <Compile Include="Day11\Puzzle11.cs" />
+    <Compile Include="Day11\Solver11.cs" />
     <Compile Include="IPuzzle.cs" />
     <Compile Include="Puzzle.cs" />
   </ItemGroup>
@@ -65,6 +69,8 @@
     <Content Include="Day06\PuzzleInstructions.txt" />
     <Content Include="Day07\PuzzleInstuctions.txt" />
     <Content Include="Day08\PuzzleInstructions.txt" />
+    <EmbeddedResource Include="Day11\data.txt" />
+    <Content Include="Day11\PuzzleInstructions.txt" />
     <EmbeddedResource Include="Day10\data.txt" />
     <Content Include="Day10\PuzzleInstructions.txt" />
     <EmbeddedResource Include="Day10\testdata.txt" />

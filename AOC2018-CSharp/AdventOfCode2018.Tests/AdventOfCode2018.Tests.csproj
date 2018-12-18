@@ -57,6 +57,7 @@
     <Compile Include="Puzzle07Tests.cs" />
     <Compile Include="Puzzle09Tests.cs" />
     <Compile Include="Puzzle10Tests.cs" />
+    <Compile Include="Puzzle11Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode2018\AdventOfCode2018.csproj">

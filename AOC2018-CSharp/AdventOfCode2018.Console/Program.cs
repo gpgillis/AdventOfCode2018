@@ -9,6 +9,7 @@
     using AdventOfCode2018.Day07;
     using AdventOfCode2018.Day08;
     using AdventOfCode2018.Day09;
+    using AdventOfCode2018.Day11;
 
     class Program
     {
@@ -17,7 +18,8 @@
             {6, new Puzzle06()},
             {7, new Puzzle07()},
             {8, new Puzzle08()},
-            {9, new Puzzle09()}
+            {9, new Puzzle09()},
+            {11, new Puzzle11()}
         };
 
         public static void Main(string[] args)
